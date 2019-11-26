@@ -19,7 +19,7 @@ if($cek > 0){
  
 		// buat session login dan username
 		$_SESSION['username'] = $username;
-		$_SESSION['level'] = "admin";
+		$_SESSION['level'] = "organisasi";
 		// alihkan ke halaman dashboard admin
 		header("location:halaman_admin.php");
  
