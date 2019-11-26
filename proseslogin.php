@@ -21,7 +21,7 @@ if($cek > 0){
 		$_SESSION['username'] = $username;
 		$_SESSION['level'] = "organisasi";
 		// alihkan ke halaman dashboard admin
-		header("location:halaman_admin.php");
+		header("location:halaman_organisasi.php");
  
 	// cek jika user login sebagai pegawai
 	}else if($data['level']=="pengguna"){
