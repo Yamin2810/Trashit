@@ -15,7 +15,7 @@ if($cek > 0){
 	$data = mysqli_fetch_assoc($login);
  
 	// cek jika user login sebagai admin
-	if($data['level']=="admin"){
+	if($data['level']=="organisasi"){
  
 		// buat session login dan username
 		$_SESSION['username'] = $username;
