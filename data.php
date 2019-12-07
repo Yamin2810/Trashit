@@ -81,7 +81,7 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="./index3.html" class="nav-link active">
+                                    <a href="data.php" class="nav-link active">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>History Order</p>
                                     </a>
