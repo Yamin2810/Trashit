@@ -2,6 +2,6 @@
 $servername = 'localhost';
 $username = 'root';
 $password = '';
-$database = 'trashit';
+$database = 'trash_it';
 $connection = mysqli_connect($servername,$username,$password,$database);
 ?>
