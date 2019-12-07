@@ -21,7 +21,7 @@ if($cek > 0){
 		$_SESSION['email'] = $username;
 		$_SESSION['tipe'] = "organisasi";
 		// alihkan ke halaman dashboard admin
-		header("location:halaman_organisasi.html");
+		header("location:halaman_organisasi.php");
  
 	// cek jika user login sebagai pegawai
 	}else if($data['tipe']=="pengguna"){
@@ -29,7 +29,7 @@ if($cek > 0){
 		$_SESSION['email'] = $username;
 		$_SESSION['tipe'] = "pengguna";
 		// alihkan ke halaman dashboard pegawai
-		header("location:halaman_pengguna.html");
+		header("location:halaman_pengguna.php");
  	
 }else{
 	header("location:index.php?pesan=gagal");
