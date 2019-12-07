@@ -1,11 +1,11 @@
 <?php
    session_start();
    require_once("database.php");
-   $username = $_POST['username'];
-$password = $_POST['password'];
+   $username = $_POST['email'];
+	$password = $_POST['pass'];
  
 // menyeleksi data user dengan username dan password yang sesuai
-$login = mysqli_query($connection,"select * from user where username='$username' and password='$password'");
+$login = mysqli_query($connection,"select * from user where email='$username' and pass='$password'");
 // menghitung jumlah data yang ditemukan
 $cek = mysqli_num_rows($login);
  
@@ -15,21 +15,21 @@ if($cek > 0){
 	$data = mysqli_fetch_assoc($login);
  
 	// cek jika user login sebagai admin
-	if($data['level']=="organisasi"){
+	if($data['tipe']=="organisasi"){
  
 		// buat session login dan username
-		$_SESSION['username'] = $username;
-		$_SESSION['level'] = "organisasi";
+		$_SESSION['email'] = $username;
+		$_SESSION['tipe'] = "organisasi";
 		// alihkan ke halaman dashboard admin
-		header("location:halaman_organisasi.php");
+		header("location:halaman_organisasi.html");
  
 	// cek jika user login sebagai pegawai
-	}else if($data['level']=="pengguna"){
+	}else if($data['tipe']=="pengguna"){
 		// buat session login dan username
-		$_SESSION['username'] = $username;
-		$_SESSION['level'] = "pengguna";
+		$_SESSION['email'] = $username;
+		$_SESSION['tipe'] = "pengguna";
 		// alihkan ke halaman dashboard pegawai
-		header("location:halaman_pengguna.php");
+		header("location:halaman_pengguna.html");
  	
 }else{
 	header("location:index.php?pesan=gagal");
