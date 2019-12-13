@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 
@@ -143,14 +146,11 @@
                             <span class="float-right text-muted text-sm">2 days</span>
                         </a>
                         <div class="dropdown-divider"></div>
-                        <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
+                        <a href="#" ><span class="glyphicon glyphicon-log-in"></span>See All Notifications</a>
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#">
-                        <i class="fas fa-th-large"></i>
-                    </a>
-                </li>
+                <a href="logout.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
             </ul>
         </nav>
         <!-- /.navbar -->
@@ -159,8 +159,8 @@
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
             <a href="index3.html" class="brand-link">
-                <img src="img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-                <span class="brand-text font-weight-light">AdminLTE 3</span>
+                <img src="img/trash4.png" alt="Admin class="brand-image img-circle elevation-3" style="opacity: .8">
+                <span class="brand-text font-weight-light">AdminTrashit</span>
             </a>
 
             <!-- Sidebar -->
@@ -171,7 +171,7 @@
                         <img src="img/avatar.png" class="img-circle elevation-2" alt="User Image">
                     </div>
                     <div class="info">
-                        <a href="#" class="d-block">Alexander Pierce</a>
+                        <a href="#" class="d-block"><?php echo $_SESSION['email']?></a>
                     </div>
                 </div>
 
@@ -202,26 +202,20 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="form_order.php" class="nav-link">
+                                    <a href="pickup.html" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>New Order</p>
+                                        <p>Pickup</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="data.php" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>History Order</p>
+                                        <p>History Pickup</p>
                                     </a>
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-header">MISCELLANEOUS</li>
-                        <li class="nav-item">
-                            <a href="https://adminlte.io/docs/3.0" class="nav-link">
-                                <i class="nav-icon fas fa-file"></i>
-                                <p>Documentation</p>
-                            </a>
-                        </li>
+                        
                         
                     </ul>
                 </nav>
@@ -273,7 +267,7 @@
                                 <div class="icon">
                                     <i class="ion ion-bag"></i>
                                 </div>
-                                <a href="form_daftar.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                                <a href="form_order.html" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                             </div>
                         </div>
                         <!-- ./col -->

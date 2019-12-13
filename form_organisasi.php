@@ -8,11 +8,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="lte/plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="lte/dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="css/adminlte.min.css">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
@@ -39,10 +39,10 @@
       <!-- Sidebar user (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="lte/dist/user5-128x128.jpg" class="img-circle elevation-2" alt="User Image">
+          <img src="img/avatar.png" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Rizki</a>
+          <a href="#" class="d-block">Alexander</a>
         </div>
       </div>
 
@@ -139,34 +139,25 @@
                     <input type="text" class="form-control" name="nama" placeholder="Nama Siswa">
                   </div>
                    <div class="form-group">
-                    <label for="exampleInputEmail1">Alamat</label>
+                    <label for="exampleInputEmail1">jenis_barang</label>
                     <input type="text" class="form-control" name="alamat" placeholder="Alamat Siswa">
                   </div>
-                  
-                    <label for="exampleInputEmail1">Jenis Kelamin</label>                   
-                  
-                          <div class="form-check">
-                          <input class="form-check-input" type="radio" name="jenis_kelamin" value="laki-laki">
-                          <label class="form-check-label">Laki-laki</label>
-                        </div>
-                        <div class="form-check">
-                          <input class="form-check-input" type="radio" name="jenis_kelamin" value="perempuan">
-                          <label class="form-check-label">Perempuan</label>
-                        </div>
-                         <div class="form-group"><br>
-
-                        <label>Agama</label>
+                        <label>Jenis Barang</label>
                         <select class="form-control" name="agama">
-                          <option>Islam</option>
-                          <option>Kristen Katolik</option>
-                          <option>Kristen Protestan</option>
-                          <option>Hindu</option>
-                          <option>Buda</option>
+                          <option></option>
+                          <option></option>
+                          <option>K</option>
+                          <option>H</option>
+                          <option>B</option>
                         </select>
                       </div>
                       <div class="form-group">
-                    <label>Asal Sekolah</label>
-                    <input type="text" class="form-control" name="sekolah_asal" placeholder="Asal Sekolah">
+                    <label>alamat</label>
+                    <input type="text" class="form-control" name="alamat" placeholder="Alamat">
+                  </div>
+                  <div class="form-group">
+                    <label>berat</label>
+                    <input type="text" class="form-control" name="berat" placeholder="Berat">
                   </div>
                   
                 </div>
@@ -211,12 +202,12 @@
 <!-- ./wrapper -->
 
 <!-- jQuery -->
-<script src="lte/plugins/jquery/jquery.min.js"></script>
+<script src="plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
-<script src="lte/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
-<script src="lte/dist/js/adminlte.min.js"></script>
+<script src="js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="lte/dist/js/demo.js"></script>
+<script src="js/demo.js"></script>
 </body>
 </html>

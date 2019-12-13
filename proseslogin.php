@@ -23,13 +23,20 @@ if($cek > 0){
 		// alihkan ke halaman dashboard admin
 		header("location:halaman_organisasi.php");
  
-	// cek jika user login sebagai pegawai
+	// cek jika user login sebagai pengguna
 	}else if($data['tipe']=="pengguna"){
 		// buat session login dan username
 		$_SESSION['email'] = $username;
 		$_SESSION['tipe'] = "pengguna";
-		// alihkan ke halaman dashboard pegawai
+		// alihkan ke halaman dashboard pengguna
 		header("location:halaman_pengguna.php");
+
+	}else if($data['tipe']=="admin"){
+		// buat session login dan username
+		$_SESSION['email'] = $username;
+		$_SESSION['tipe'] = "admin";
+		// alihkan ke halaman dashboard admin
+		header("location:halaman_admin.php");
  	
 }else{
 	header("location:index.php?pesan=gagal");
