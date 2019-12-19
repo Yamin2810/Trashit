@@ -9,6 +9,7 @@
    $jk                      = $_POST['gender'];
    $phone                   = $_POST['phone'];
    $lokasi                   = $_POST['alamat'];
+   $tipe                   = $_POST['subject'];
    // END ambil data dri form
    $sql                     = "SELECT * FROM user WHERE email = '$email'";
    $query                   = $connection->query($sql);
