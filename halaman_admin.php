@@ -151,7 +151,9 @@ session_start();
                     </div>
                 </li>
                 <li class="nav-item">
-                <a href="logout.php"><span class="icon ion-md-contact"></span></a></li>
+                <a href="logout.php">
+                <i class="fas fa-sign-out-alt">Logout</i>
+                </li>
                    
             </ul>
         </nav>
@@ -160,8 +162,8 @@ session_start();
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
-            <a href="index3.html" class="brand-link">
-                <img src="img/trash04.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+            <a href="halaman_admin.php" class="brand-link">
+                <img src="img/trash1.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
                 <span class="brand-text font-weight-light">Admin TRASH IT</span>
             </a>
 
