@@ -1,3 +1,7 @@
+<?php
+session_start();
+include  'database.php';
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,24 +30,21 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="lte/index3.html" class="brand-link">
-      <img src="lte/dist/img/AdminLTELogo.png"
-           alt="AdminLTE Logo"
-           class="brand-image img-circle elevation-3"
-           style="opacity: .8">
-      <span class="brand-text font-weight-light">AdminLTE 3</span>
-    </a>
+    <a href="index3.html" class="brand-link">
+                <img src="img/trash1.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+                <span class="brand-text font-weight-light">Admin TRASH IT</span>
+            </a>
 
     <!-- Sidebar -->
     <div class="sidebar">
       <!-- Sidebar user (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="img/avatar.png" class="img-circle elevation-2" alt="User Image">
+          <img src="img/avatar04.png" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Alexander</a>
-        </div>
+          <a href="#" class="d-block"> <?php echo $_SESSION['tipe']?></a>
+          </div>
       </div>
 
       <!-- Sidebar Menu -->
@@ -60,38 +61,26 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="halaman_pengguna.php" class="nav-link">
+                                    <a href="halaman_admin.php" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Home</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="./index.html" class="nav-link">
+                                    <a href="form_organisasi.php" class="nav-link active">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Artikel</p>
+                                        <p>Add New Organization ID</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="form_order.fa-php" class="nav-link active">
+                                    <a href="listuser.php" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>New Order</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="data.php" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>History Order</p>
+                                        <p>User Registration List</p>
                                     </a>
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-header">MISCELLANEOUS</li>
-                        <li class="nav-item">
-                            <a href="https://adminlte.io/docs/3.0" class="nav-link">
-                                <i class="nav-icon fas fa-file"></i>
-                                <p>Documentation</p>
-                            </a>
-                        </li>
+                        
           </ul>
       </nav>
       
@@ -107,12 +96,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Formulir Pendaftaran Siswa Baru</h1>
+            <h1>Formulir Pendaftaran Organisasi Baru</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Formulir Pendaftaran Siswa Baru</li>
+              <li class="breadcrumb-item active">Formulir Pendaftaran Organisasi Baru</li>
             </ol>
           </div>
         </div>
@@ -136,21 +125,12 @@
                 <div class="card-body">
                   <div class="form-group">
                     <label for="exampleInputEmail1">Nama</label>
-                    <input type="text" class="form-control" name="nama" placeholder="Nama Siswa">
+                    <input type="text" class="form-control" name="nama" placeholder="Nama Organisasi">
                   </div>
                    <div class="form-group">
                     <label for="exampleInputEmail1">jenis_barang</label>
-                    <input type="text" class="form-control" name="alamat" placeholder="Alamat Siswa">
+                    <input type="text" class="form-control" name="jenis_barang" placeholder="Jenis Barang">
                   </div>
-                        <label>Jenis Barang</label>
-                        <select class="form-control" name="agama">
-                          <option></option>
-                          <option></option>
-                          <option>K</option>
-                          <option>H</option>
-                          <option>B</option>
-                        </select>
-                      </div>
                       <div class="form-group">
                     <label>alamat</label>
                     <input type="text" class="form-control" name="alamat" placeholder="Alamat">
