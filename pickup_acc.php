@@ -159,12 +159,6 @@ session_start();
             <span><?php echo $_SESSION['email']?></span>
           </a>
           <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-            <span class="dropdown-header">Profil</span>
-            <div class="dropdown-divider"></div>
-            <a href="change.php" class="dropdown-item">
-              <i class="fas fa-user mr-2"></i>Profil
-              <span class="float-right text-muted text-sm">Edit</span>
-            </a>
             <div class="dropdown-divider"></div>
             <a href="logout.php" class="dropdown-item">
             <i class="fas fa-sign-out-alt"></i> Logout
@@ -260,7 +254,7 @@ session_start();
                         </thead>
                         <tbody>
                         <?php
-                        $sql = "SELECT * FROM user_order o where status='Tunggu'";
+                        $sql = "SELECT * FROM user_order where stat='Tunggu'";
                         $query = mysqli_query($connection, $sql);
                         while($pickup = mysqli_fetch_array($query)){
                           echo "<tr>";
@@ -270,8 +264,7 @@ session_start();
                           echo "<td>".$pickup['alamat']."</td>";
                           echo "<td>".$pickup['berat']."</td>";
                           echo "<td>";
-                          echo "<a href='form_edit.php?id=".$pickup['order_id']."'>Accept</a> | ";
-                          echo "<a href='hapus.php?id=".$pickup['order_id']."'>Tunggu</a>";
+                          echo "<a href='edit.php?id=".$pickup['order_id']."'>Ubah Status</a>";
                           echo "</td>";
                           
                           echo "</tr>";
