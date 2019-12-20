@@ -77,7 +77,7 @@ session_start();
             <a href="#" class="dropdown-item">
               <!-- Message Start -->
               <div class="media">
-                <img src="img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+                <img src="../../dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
                 <div class="media-body">
                   <h3 class="dropdown-item-title">
                     Brad Diesel
@@ -93,7 +93,7 @@ session_start();
             <a href="#" class="dropdown-item">
               <!-- Message Start -->
               <div class="media">
-                <img src="img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+                <img src="../../dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
                 <div class="media-body">
                   <h3 class="dropdown-item-title">
                     John Pierce
@@ -109,7 +109,7 @@ session_start();
             <a href="#" class="dropdown-item">
               <!-- Message Start -->
               <div class="media">
-                <img src="img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+                <img src="../../dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
                 <div class="media-body">
                   <h3 class="dropdown-item-title">
                     Nora Silvester
@@ -159,12 +159,6 @@ session_start();
             <span><?php echo $_SESSION['email']?></span>
           </a>
           <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-            <span class="dropdown-header">Profil</span>
-            <div class="dropdown-divider"></div>
-            <a href="change.php" class="dropdown-item">
-              <i class="fas fa-user mr-2"></i>Profil
-              <span class="float-right text-muted text-sm">Edit</span>
-            </a>
             <div class="dropdown-divider"></div>
             <a href="logout.php" class="dropdown-item">
             <i class="fas fa-sign-out-alt"></i> Logout
@@ -269,7 +263,7 @@ session_start();
                           echo "<td>".$pickup['jenis_order']."</td>";
                           echo "<td>".$pickup['alamat']."</td>";
                           echo "<td>".$pickup['berat']."</td>";
-                          echo "<td>".$pickup['status']."</td>";            
+                          echo "<td>".$pickup['stat']."</td>";            
                           echo "</tr>";
                         }   
                         ?>
