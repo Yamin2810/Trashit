@@ -1,6 +1,6 @@
 <?php
 
-include("config.php");
+include("database.php");
 
 // cek apakah tombol daftar sudah diklik atau blum?
 if(isset($_POST['daftar'])){
@@ -12,16 +12,16 @@ if(isset($_POST['daftar'])){
 	$berat = $_POST['berat'];
 	
 	// buat query
-	$sql = "INSERT INTO user_order (nama, jenis_pickup, alamat, berat) VALUE ('$nama', '$jns', '$alamat', '$berat')";
-	$query = mysqli_query($db, $sql);
+	$sql = "INSERT INTO user_order (order_id, nama, jenis_order, alamat, berat, stat) VALUE ('', '$nama', '$jns', '$alamat', '$berat', 'Tunggu')";
+	$query = mysqli_query($connection, $sql);
 	
 	// apakah query simpan berhasil?
 	if( $query ) {
-		// kalau berhasil alihkan ke halaman index.php dengan status=sukses
-		header('Location: list.php');
+		// kalau berhasil alihkan ke halaman pickup history dengan status=sukses
+		header('Location: data.php');
 	} else {
 		// kalau gagal alihkan ke halaman indek.ph dengan status=gagal
-		header('Location: index.php?status=gagal');
+		header('Location: pickup.php?status=gagal');
 	}
 	
 	
