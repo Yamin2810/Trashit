@@ -165,12 +165,6 @@ session_start();
             <span><?php echo $_SESSION['email']?></span>
           </a>
           <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-            <span class="dropdown-header">Profil</span>
-            <div class="dropdown-divider"></div>
-            <a href="change.php" class="dropdown-item">
-              <i class="fas fa-user mr-2"></i>Profil
-              <span class="float-right text-muted text-sm">Edit</span>
-            </a>
             <div class="dropdown-divider"></div>
             <a href="logout.php" class="dropdown-item">
             <i class="fas fa-sign-out-alt"></i> Logout
@@ -228,7 +222,7 @@ session_start();
                                 <div class="icon">
                                     <i class="ion ion-bag"></i>
                                 </div>
-                                <a href="pickup.html" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                                <a href="pickup.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                             </div>
                         </div>
                         <!-- ./col -->
