@@ -1,5 +1,7 @@
 <?php
+include ("database.php");
 session_start();
+$fname = $_SESSION["user_fname"];
 ?>
 <!DOCTYPE html>
 <html>
@@ -158,12 +160,7 @@ session_start();
             <span><?php echo $_SESSION['email']?></span>
           </a>
           <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-            <span class="dropdown-header">Profil</span>
-            <div class="dropdown-divider"></div>
-            <a href="change.php" class="dropdown-item">
-              <i class="fas fa-user mr-2"></i>Profil
-              <span class="float-right text-muted text-sm">Edit</span>
-            </a>
+            
             <div class="dropdown-divider"></div>
             <a href="logout.php" class="dropdown-item">
             <i class="fas fa-sign-out-alt"></i> Logout
@@ -218,7 +215,7 @@ session_start();
                                 <div class="icon">
                                     <i class="ion ion-bag"></i>
                                 </div>
-                                <a href="pickup.html" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                                <a href="pickup.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                             </div>
                         </div>
                         <!-- ./col -->
@@ -249,22 +246,29 @@ session_start();
                     <table id="example1" class="table table-bordered table-striped">
                         <thead>
                             <tr>
-                                <th>Rendering engine</th>
-                                <th>Browser</th>
-                                <th>Platform(s)</th>
-                                <th>Engine version</th>
-                                <th>CSS grade</th>
+                            <th>Pickup ID</th>
+                                <th>Nama</th>
+                                <th>Jenis</th>
+                                <th>Alamat</th>
+                                <th>Berat</th>
+                                <th>Status</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>Trident</td>
-                                <td>Internet Explorer 4.0
-                                </td>
-                                <td>Win 95+</td>
-                                <td> 4</td>
-                                <td>X</td>
-                            </tr>
+                        <?php
+                        $sql = "SELECT * FROM user_order WHERE nama = '$fname' Order BY order_id DESC";
+                        $query = mysqli_query($connection, $sql);
+                        while($pickup = mysqli_fetch_array($query)){
+                          echo "<tr>";
+                          echo "<td>".$pickup['order_id']."</td>";
+                          echo "<td>".$pickup['nama']."</td>";
+                          echo "<td>".$pickup['jenis_order']."</td>";
+                          echo "<td>".$pickup['alamat']."</td>";
+                          echo "<td>".$pickup['berat']."</td>";
+                          echo "<td>".$pickup['stat']."</td>";            
+                          echo "</tr>";
+                        }   
+                        ?>
 
                             </tfoot>
                     </table>
